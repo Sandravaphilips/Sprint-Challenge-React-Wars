@@ -18,7 +18,7 @@ const App = () => {
   // sync up with, if any.
 
   useEffect(() => {
-    axios.get('https://swapi.co/api/people/')
+    axios.get('https://swapi.co/api/people/?format=json')
     .then(response => {
       setContent(content.concat(response.data.results))
       console.log(content)

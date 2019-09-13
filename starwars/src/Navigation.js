@@ -4,20 +4,20 @@ import styled from 'styled-components';
 const NavigationStyle = styled.div`
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid black;
     /* border-top: 1px solid white; */
     height: 40px;
     padding-top: 10px;
 
     a {
         text-decoration: none;
-        border-right: 1px solid white;
+        border-right: 1px solid black;
         color: white;
         text-align: center;
         width: 100%;
 
         &:hover {
-            color: #0066B3;
+            color: brown;
         }
     }
 
