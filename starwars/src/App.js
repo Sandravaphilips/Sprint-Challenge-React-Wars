@@ -2,6 +2,12 @@ import React, {useState, useEffect} from 'react';
 import './App.css';
 import StarWarsComponent from "./StarWars";
 import axios from "axios";
+import Navigation from "./Navigation";
+import styled from 'styled-components';
+
+const AppStyle = styled.div`
+  padding: 0 20px 20px;
+`
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -22,7 +28,8 @@ const App = () => {
 
   if (!content) return <h3>Loading...</h3>
   return (
-    <div className="App">
+    <AppStyle className="App">
+      <Navigation />
       <h1 className="Header">React Wars</h1>
       {content.map(character => {
         if(character.gender === "n/a") {
@@ -30,7 +37,7 @@ const App = () => {
         }
         return <StarWarsComponent name={character.name} height={character.height} hairColor={character["hair_color"]} mass={character.mass} gender={character.gender} url={character.url} eyeColor={character["eye_color"]} birthYear={character["birth_year"]} skinColor={character["skin_color"]} />
       })}
-    </div>
+    </AppStyle>
   );
 }
 
